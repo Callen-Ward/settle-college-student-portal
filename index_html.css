@@ -1,0 +1,65 @@
+:root {
+  --bg-colour: #ffffff;
+  --border-width: 1px;
+  --border-colour: #000000;
+  --border-style: solid;
+
+  --columns: 5;
+  --main-padding: 1rem;
+  --gap: 1rem;
+
+  --link-padding-vertical: 4vw;
+  --container-padding: 1.5vw;
+  --container-padding-hover: 0.5vw;
+  --transition-duration: 0.5s;
+  --transition-function: linear;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-colour);
+  padding: 0;
+  margin: 0;
+  scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  padding: var(--main-padding);
+  gap: var(--gap);
+}
+
+.container {
+  display: block;
+  width: 100%;
+  padding: var(--container-padding);
+  transition-property: padding;
+  transition-duration: var(--transition-duration);
+  transition: padding var(--transition-duration) var(--transition-function)
+}
+
+main a:hover .container {
+  padding: var(--container-padding-hover);
+}
+
+main a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0rem var(--link-padding-vertical);
+  border-width: var(--border-width);
+  border-color: var(--border-colour);
+  border-style: var(--border-style);
+}
