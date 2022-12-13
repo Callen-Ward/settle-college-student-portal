@@ -10,9 +10,9 @@
 
   --link-padding-vertical: 4vw;
   --container-padding: 1.5vw;
-  --container-padding-hover: 0.5vw;
-  --transition-duration: 0.5s;
-  --transition-function: linear;
+  --container-padding-hover: 0.75vw;
+  --transition-duration: 0.25s;
+  --transition-function: ease-out;
 }
 
 * {
